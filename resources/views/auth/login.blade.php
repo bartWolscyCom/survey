@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-
 
 <div class="container-fluid full-height">
     <div class="row row-height">
@@ -46,13 +44,18 @@
                             </label>
                         </div>
 
+                        @if(session('error'))
+                        <div class="alert alert-danger">
+                            {{session('error')}}
+                        </div>
+                        @endif
+
                         <div class="form-group mb-0" id="bottom-wizard">
                             <button type="submit" class="submit">
                                 {{ __('Login') }}
                             </button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
